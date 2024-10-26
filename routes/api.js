@@ -11,7 +11,7 @@ const pos = require('pos');
 const User = require('../models/user'); // Adjust the path if necessary
 
 // Initialize OpenAI with your API key
-require('dotenv').config();
+require('dotenv').config({ path: '../.env' })
 
 // 使用 process.env 来获取 API 密钥
 const apiKey = process.env.OPENAI_API_KEY;
