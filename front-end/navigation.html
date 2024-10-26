@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Navigation</title>
+  <link rel="stylesheet" href="navigation.css">
+</head>
+
+<body>
+  <div class="Navigationbar">
+    <!-- Sidebar Menu Icon -->
+    <label class="menu" onclick="toggleSidebar()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Logo (Shuo Gu Shi) -->
+    <a href="create_story.html" class="whispr-button">Whispr</a>
+
+    <!-- Search Bar -->
+    <form class="searchBox" action="search.html" method="get">
+      <input id="searchInput" name="keyword" type="search" placeholder="Search...">
+      <button class="searchword" type="submit">
+        <img id="search" src="pictures/magnifying-glass.png">
+      </button>
+    </form>
+
+    <!-- Login and Register Buttons -->
+    <div class="navbutton" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+      <button id="loginButton" onclick="location.href='login.html'" style="margin-right: 10px;">Login</button>
+      <button id="registerButton" onclick="location.href='registration.html'">Register</button>
+    </div>
+
+
+    <!-- User Avatar and Dropdown -->
+    <div class="userlist">
+      <img id="userAvatar" src="pictures/user_avatar.png" alt="User Avatar" onclick="toggleUserDropdown()">
+      <!-- User Dropdown Menu -->
+      <ul class="userSidebar" id="userSidebar">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="mystory.html">My Collection</a></li>
+        <li><a href="mysave.html">Saved Whispr</a></li>
+        <li><a href="#" id="logout">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <ul class="sidebar" id="sidebar">
+    <li><a href="index.html">Homepage</a></li>
+    <li><a href="tutorial.html">Tutorial</a></li>
+    <li><a href="Feature.html">Features</a></li>
+    <li><a href="about.html">About Us</a></li>
+  </ul>
+
+  <script src="navigation.js"></script>
+
+</body>
+
+</html>

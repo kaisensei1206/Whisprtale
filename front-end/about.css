@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap');
+#nav-placeholder {
+    margin-bottom: 5rem; /* 确保导航栏和下面的内容有足够的间距 */
+}
+
+
+body {
+    margin: 10rem;
+    padding: 2rem;
+    font-family: 'Pacifico', cursive;
+    background: linear-gradient(135deg, #6d83f2, #d4a0f5);
+    color: #ffffff;
+}
+
+/* 关于我们部分样式 */
+.about-us {
+    padding: 4rem 2rem;
+    margin-top: 10rem; /* 确保导航栏不遮挡内容 */
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    margin: 0 auto; /* 水平居中 */
+    text-align: center;
+}
+
+.about-us:hover {
+    transform: translateY(-10px); /* 鼠标悬停时的浮动效果 */
+}
+
+.about-us h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color:#ffffff; /* Example gradient background */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-us p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease-in-out;
+}
+
+.about-us p:hover {
+    color: #a8d2ee; /* 段落文字在悬停时改变颜色 */
+}
+
+/* 动画效果 */
+.about-us h2, .about-us p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.about-us h2 {
+    animation-delay: 0.2s;
+}
+
+.about-us p:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.about-us p:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.about-us p:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+/* 关键帧动画 */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .about-us {
+        padding: 2rem;
+    }
+
+    .about-us h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-us p {
+        font-size: 1.2rem;
+    }
+}
+
+.about-us img {
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+    max-width: 100%; /* Ensures the image scales responsively */
+    height: auto; /* Keeps the aspect ratio */
+}
+
+.logo img {
+    width: 300px; /* Set a uniform width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Add spacing between images */
+    display: inline-block; /* Keep images inline */
+    vertical-align: middle; /* Align images vertically if necessary */
+}
+
+.logo {
+    text-align: center; /* Centers the logo section */
+    margin-top: 20px; /* Add some space above the logo section */
+}

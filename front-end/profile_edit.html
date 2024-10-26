@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
+    <link rel="stylesheet" href="profile_edit.css">
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+    <div class="profile-container">
+        <div class="content">
+            <h1>Edit Profile</h1>
+            <div class="avatar-container">
+                <img id="profile-picture" src="pictures/user_avatar.png" alt="Profile Picture">
+                <!-- Camera icon for uploading a new profile picture -->
+                <div class="camera-icon" id="camera-icon">
+                    <i class="fas fa-camera"></i>
+                    <input type="file" id="upload-image" accept="image/*" style="display:none;">
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="field">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Enter your username">
+                </div>
+                <div class="field">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="Your email" readonly>
+                </div>
+                <div class="field">
+                    <label for="phonenum">Phone Number:</label>
+                    <input type="text" id="phonenum" placeholder="Enter your phone number">
+                </div>
+                <div class="field">
+                    <label for="realname">Name:</label>
+                    <input type="text" id="realname" placeholder="Enter your name">
+                </div>
+                <div class="field">
+                    <label for="bday">Birthday:</label>
+                    <input type="date" id="bday">
+                </div>
+                <button id="save-changes-button" type="submit">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for cropping the image -->
+    <div id="cropModal" class="modal">
+        <div class="modal-content">
+            <div id="crop-container">
+                <img id="crop-image" src="" alt="Crop Image">
+                <button id="crop-button">Crop Image</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script src="navigation.js" defer></script>
+    <script src="profile_edit.js"></script>
+</body>
+
+</html>

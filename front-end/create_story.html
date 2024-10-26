@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Story - 説故事</title>
+    <link rel="stylesheet" href="create_story.css">
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <section class="create-story">
+        <h1>Create Your Story!</h1>
+        <p>Enter book name!</p>
+        <input type="text" id="book-name" placeholder="Your book name" oninput="validateForm()">
+
+        <p>Upload an MP3 file!</p>
+        <label for="audio-file" class="custom-file-upload">
+            Upload
+            <input type="file" id="audio-file" accept=".mp3" onchange="validateForm()" style="display:none;">
+        </label>
+        <span id="file-name-display" class="file-name-display"></span>
+
+        <p class="or-text">Or</p>
+        <textarea id="story-text" placeholder="Input story here!" rows="5" oninput="validateForm()"></textarea>
+
+        <button id="confirm-btn" onclick="confirmStory()" disabled>Confirm</button>
+        <p id="please-wait-message" style="display:none;">Please wait...</p>
+        <p id="generating-story-message" style="display:none;">Generating story...</p>
+        <p id="error-message" style="display:none; color: red;">Error generating story.</p>
+    </section>
+
+    <div id="loading-container" style="display:none;">
+        <div class="loading-animation"></div>
+        <p id="progress-percentage">0%</p>
+    </div>
+
+    <script>
+        function loadNavigation() {
+            fetch('navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('nav-placeholder').innerHTML = data;
+                    console.log('Navigation HTML loaded successfully'); // Log success
+                    initPage(); // Only initialize the page after navigation is loaded
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        }
+    </script>
+    <script src="create_story.js" defer></script>
+    <script src="navigation.js" defer></script>
+    <script>
+        window.onload = function () {
+            loadNavigation(); // Ensure the navigation is loaded on page load
+        };
+    </script>
+</body>
+</body>
+
+</html>

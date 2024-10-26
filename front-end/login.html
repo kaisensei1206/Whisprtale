@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>説故事</title>
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+    <div id="login-container">
+        <div id="login">
+            <h1>登入</h1>
+            <input id="account" type="text" required placeholder="用戶名稱或電子郵件地址" />
+
+            <div class="password-container">
+                <input id="password" type="password" required placeholder="密碼" />
+                <i class="far fa-eye" id="togglePassword"></i>
+            </div>
+
+            <button id="loginBtn" type="button">登入</button>
+
+            <div class="google-signin-container">
+                <a href="http://localhost:3001/auth/google" id="google-signin">
+                    <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png"
+                        alt="Sign in with Google">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function loadNavigation() {
+            fetch('navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('nav-placeholder').innerHTML = data;
+                    console.log('Navigation HTML loaded successfully'); // Log success
+                    initPage(); // Only initialize the page after navigation is loaded
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        }
+    </script>
+    <script src="login.js" defer></script>
+    <script src="navigation.js" defer></script>
+
+    <script>
+        window.onload = function () {
+            loadNavigation(); // Ensure the navigation is loaded on page load
+        };
+    </script>
+</body>
+
+</html>

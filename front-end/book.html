@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Book Details</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+
+<body>
+  <div id="nav-placeholder"></div>
+  <div id="book-container">
+    <div id="book-image">
+      <img id="book-cover" alt="Book Cover">
+    </div>
+    <div id="book-info">
+      <h1 id="book-title"></h1>
+      <p id="book-summary"></p>
+      <p id="book-details">
+        <span id="book-author"></span>
+        <span id="book-genre"></span>
+      </p>
+      <div id="button-container">
+        <button id="publish-btn">Publish</button>
+        <button id="view-btn">View</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function loadNavigation() {
+      fetch('navigation.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('nav-placeholder').innerHTML = data;
+          console.log('Navigation HTML loaded successfully'); // Log success
+          initPage(); // Only initialize the page after navigation is loaded
+        })
+        .catch(error => console.error('Error loading navigation:', error));
+    }
+  </script>
+  <script src="navigation.js" defer></script>
+  <script src="book.js" defer></script>
+  <script>
+    window.onload = function () {
+      loadNavigation(); // Ensure the navigation is loaded on page load
+    };
+  </script>
+</body>
+
+</html>

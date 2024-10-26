@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap');
+
+body {
+  font-family: 'Pacifico', cursive;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6d83f2, #d4a0f5);
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#book-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 1400px;
+  /* Further increased width to fit the text and enlarged image */
+  margin: 0 auto;
+}
+
+#book-image {
+  flex: 1;
+  padding-right: 80px;
+  /* Increased padding to push the text even further right */
+}
+
+#book-cover {
+  width: 125%;
+  /* Keep the image size as previously increased by 25% */
+  height: auto;
+  border-radius: 8px;
+}
+
+#book-info {
+  flex: 2;
+  margin-left: 50px;
+  /* Added margin to move the entire text block further to the right */
+}
+
+#book-title {
+  font-size: 2.5em;
+  color: #fcfcfc;
+  margin-bottom: 10px;
+}
+
+#book-summary {
+  font-size: 1.4em;
+  color: #fefafa;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+#book-details {
+  font-size: 1.2em;
+  color: #f8f6f6;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#book-genre {
+  font-size: 0.8em;
+  color: #d4d2d2;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+
+#book-author {
+  font-size: 0.8em;
+  color: #f7f3f3;
+  margin-bottom: 10px;
+}
+
+#button-container {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #6d83f2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Pacifico', cursive;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #576bcf;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #4b5cad;
+  transform: scale(0.98);
+}
+
+.popup-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}

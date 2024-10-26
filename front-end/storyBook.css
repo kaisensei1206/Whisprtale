@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    background: linear-gradient(135deg, #6d83f2, #d4a0f5);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Add this to your existing CSS file */
+
+.slideshow-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Title */
+h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-family: 'Great Vibes', cursive;
+    color: #ffffff;
+    text-align: center;
+}
+
+#story-container {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px 0;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+}
+
+.slide {
+    display: none;
+    position: relative;
+}
+
+.caption-container {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+/* Navigation Buttons */
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.nav-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #ffffff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.custom-back-button {
+    background-color: #a063f9;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+    font-family: 'Pacifico', cursive;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.custom-back-button:hover {
+    background-color: #8a4acb;
+}
+
+/* Full-Screen Button */
+.fullscreen-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.fullscreen-button img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.fullscreen-button img:hover {
+    transform: scale(1.2);
+}
+
+/* Full-Screen Mode */
+.fullscreen-mode .slideshow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    background-color: #000;
+    z-index: 1000;
+}

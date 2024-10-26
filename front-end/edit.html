@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Editor - 説故事</title>
+    <link rel="stylesheet" href="edit.css">
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <section class="story-editor">
+        <h1>Story review</h1>
+        <div id="textboxes-container"></div>
+    </section>
+
+    <script>
+        function loadNavigation() {
+            fetch('navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('nav-placeholder').innerHTML = data;
+                    console.log('Navigation HTML loaded successfully'); // Log success
+                    initPage(); // Only initialize the page after navigation is loaded
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        }
+    </script>
+
+    <script src="navigation.js" defer></script>
+    <script src="edit.js" defer></script>
+    <script>
+        window.onload = function () {
+            loadNavigation(); // Ensure the navigation is loaded on page load
+        };
+    </script>
+</body>
+
+</html>

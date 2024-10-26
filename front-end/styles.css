@@ -1,0 +1,293 @@
+.Navigationbar{
+    background-color: #D9D9D9;
+    height:69px;
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 2 列 */
+    grid-template-rows: auto; /* 自動調整行高 */
+    
+}
+
+.Navigationbar img{
+    padding: 15px 15px 15px 15px;
+}
+
+/* The switch - the box around the slider */
+.Navigationbar .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 90px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .Navigationbar .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .Navigationbar .slider {
+    position: absolute;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #C3B7CB;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%
+  }
+  
+  .Navigationbar .slider:before {
+    position: absolute;
+    background-color: #C3B7CB;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+
+  
+  .Navigationbar .switch input:checked + .slider {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+#toggle{
+position: absolute;
+top:20px;
+left: 120px;
+
+}
+
+
+#user_avatar{
+  position: absolute;
+  right:100px;
+  padding-top:10px;
+}
+
+.container{
+  /*background-color: #F1F0F2;*/
+  display:grid;
+  grid-template-columns:33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  margin:20px 20px 20px 90px;
+  
+  
+}
+
+.item{
+  position:relative;
+  height: 250px;
+  width:350px;
+  background-color: #EBE8EC;
+  border:#C3B7CB solid 15px;
+  gap:30px;
+  
+}
+
+body{
+  margin: 0px 0px 0px 0px;
+}
+
+.like{
+  border:none;
+  position :absolute;
+  bottom:0;
+  left:0;
+  background-color: #EBE8EC;
+  cursor: pointer;
+}
+
+.dislike{
+  border:none;
+  position :absolute;
+  bottom:0;
+  right:0;
+  background-color: #EBE8EC;
+  cursor: pointer;
+}
+
+
+.like:hover,
+.dislike:hover
+{
+  box-shadow:2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.bottom {
+  display: flex;
+  
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  align-items: center;
+   /* 可以根据需要调整 */
+  left:40%;
+  gap: 20px;
+ 
+  
+}
+
+
+  
+
+
+
+
+.page{
+  background-color: #C3B7CB;
+  width:40px;
+  height:45px;
+  text-align: right;
+}
+
+input{
+  background-color: #C3B7CB;
+  border-width: 2px;
+  margin-right: 5px;
+  width:fit-content;
+  height:20px;
+
+  
+}
+
+input[type="number"]::placeholder {
+  color: #ffffff; /* Placeholder 文本颜色 */
+  text-align: right;
+  font-size: 20px;
+ 
+  
+}
+
+
+#container1 {  
+    border: 2px solid #C3B7CB;
+    width:100%;
+    height:400px;
+    padding:0px;
+  }
+
+#upload{
+  width:50px;
+  height: auto;
+}
+
+
+
+#login{
+  display:grid;
+  grid-template-columns:50% 50%;
+  position: relative;
+}
+
+#content{
+  
+  margin-left: 50px;
+  padding: 10px;
+  grid-column-start: 1;
+  
+ 
+}
+
+
+.space{
+  margin-top:10px;
+  display:block;
+}
+
+#uavatar{
+  position: absolute;
+  display:grid;
+  grid-column-start: 2;
+  justify-self: center;
+  margin-top: 40px;
+  
+}
+
+#user{
+  width:400px;
+  height:400px;
+}
+
+#save button{
+  position: relative;
+  background-image: linear-gradient(to bottom left, #060606, white);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+  text-align: center; /* 水平居中 */
+  overflow-y: hidden;
+  grid-column: span 3;
+}
+
+ #save button::before {
+  content: '';
+  position: absolute; /* 将伪元素相对于按钮进行绝对定位 */
+  width: 100%;
+  height: 0%;
+  left: 0;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+  transition: .2s;
+  background-color: #201f1f;
+  opacity: 0.3;
+  
+  
+}
+
+
+#register{
+  display:grid;
+  grid-template-columns:50% 50%;
+  position: relative;
+}
+
+
+.black button{
+  position: relative;
+  background-image: linear-gradient(to bottom left, #060606, white);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+  text-align: center; /* 水平居中 */
+  overflow-y: hidden;
+  
+}
+
+.black button::before {
+  content: '';
+  position: absolute; /* 将伪元素相对于按钮进行绝对定位 */
+  width: 100%;
+  height: 0%;
+  left: 0;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+  transition: .2s;
+  background-color: #201f1f;
+  opacity: 0.3;
+  
+  
+}
+
+.black button:hover::before {
+  /* 其他悬停时的样式 */
+  height: 120%; /* 鼠标悬停时的高度 */
+}
+

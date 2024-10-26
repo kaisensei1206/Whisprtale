@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap');
+
+.step {
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+#tutorial h1, #tutorial h4, #tutorial p, .media-placeholder img, .media-placeholder video {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Staggered animation for better visual effect */
+#tutorial h1 {
+    animation-delay: 0.2s;
+}
+
+#tutorial h4 {
+    animation-delay: 0.4s;
+}
+
+#tutorial p {
+    animation-delay: 0.6s;
+}
+
+.media-placeholder img,
+.media-placeholder video {
+    animation-delay: 0.8s;
+    max-width: 1000px;
+    max-height: 800px;
+    object-fit: cover;
+    border: 2px solid #666;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+body {
+    margin: 20px;
+    padding: 2rem;
+    font-family: 'Pacifico', cursive;
+    background: linear-gradient(135deg, #6d83f2, #d4a0f5);
+    color: #ffffff;
+}
+
+/* Keyframe animation for fade in and up */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#tutorial h4 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    margin-left: 20PX;
+}
+
+#tutorial p {
+    font-size: 26px;
+    margin-left: 20PX;
+}
+
+#tutorial h1{
+    font-size: 40px;
+    margin-left: 20PX;
+}

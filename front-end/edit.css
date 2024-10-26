@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    background: linear-gradient(135deg, #6d83f2, #d4a0f5);
+    color: #ffffff;
+}
+
+.story-editor {
+    padding: 50px;
+    max-width: 800px;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.story-editor h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #6d83f2;
+    font-family: 'Great Vibes', cursive;
+}
+
+.story-editor p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.story-editor textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #a063f9;
+    border-radius: 5px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.story-editor button {
+    background-color: #a063f9;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+.story-editor button:hover {
+    background-color: #8a4acb;
+}
+
+.placeholder-image {
+    width: 80%;
+    /* Make the image larger */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.regenerate-button,
+.produce-button {
+    display: block;
+    margin: 20px auto;
+    /* Center the button */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #6d83f2;
+    /* Match the styling */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.regenerate-button:hover {
+    background-color: #8a4acb;
+    transform: scale(1.05);
+}

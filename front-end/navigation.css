@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+}
+
+.Navigationbar {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #6d83f2, #d4a0f5);
+  padding: 0 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.userlist {
+  display: flex;
+  align-items: center;
+  /* Aligns items vertically centered */
+  flex-direction: row;
+  /* Ensures username and avatar are in a row */
+}
+
+.username {
+  color: white;
+  font-size: 24px;
+  margin-right: 10px;
+  /* Add space between username and avatar */
+}
+
+.userlist img#userAvatar {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin-right: 40px;
+  border-radius: 50%;
+  border: 2px solid #44025a;
+  object-fit: cover;
+  /* Ensures the avatar image fills the circle */
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  background-color: rgba(51, 51, 51, 0.9);
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: transform 0.5s ease;
+  transform: translateX(-300px);
+  z-index: 999;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.sidebar.open {
+  transform: translateX(300px);
+}
+
+.sidebar li {
+  list-style-type: none;
+  padding: 8px 8px 8px 32px;
+  text-align: left;
+  border-bottom: 3px solid #555;
+  margin-bottom: 30px;
+}
+
+.sidebar li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 26px;
+  display: block;
+}
+
+.sidebar li a:hover {
+  background-color: #575757;
+  width: 100%;
+
+}
+
+.menu {
+  width: 30px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menu span {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 2px;
+  transition: .3s;
+  width: 100%;
+  height: 4px;
+}
+
+.menu span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+}
+
+.menu span:nth-child(2) {
+  top: 11px;
+  left: 0px;
+}
+
+.menu span:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+}
+
+.whispr-button {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: bold;
+  justify-content: start;
+  color: rgb(229, 116, 237);
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-align: center;
+  line-height: normal;
+  cursor: pointer;
+  transition: text-shadow 0.3s ease-in-out;
+  margin-right: 70px;
+}
+
+.whispr-button:hover {
+  text-shadow: 0 0 8px rgba(243, 239, 244, 0.8);
+}
+
+/* navigation.css */
+.Navigationbar .searchBox {
+  display: flex;
+  align-items: center;
+  background: #EBE8EC;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  width: 350px;
+  height: 40px;
+  margin-left: 30px;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.Navigationbar #searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  color: #000;
+  font-size: 16px;
+  line-height: 40px;
+  width: 100%;
+  padding-left: 15px;
+}
+
+.Navigationbar .searchword {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  /* Set width to match the height */
+  height: 40px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.Navigationbar .searchword img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: auto;
+  /* Center the icon inside the button */
+}
+
+.navbutton button {
+  all: unset;
+  display: inline-block;
+  font-size: large;
+  width: 80px;
+  height: 40px;
+  background-color: #d4a0f5;
+  border: 3px solid #a86ef0;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbutton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbutton button:hover {
+  background-color: #a29cb1;
+}
+
+.userSidebar {
+  display: none;
+  position: absolute;
+  right: 40px;
+  top: 50px;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 5px;
+  overflow: hidden;
+
+}
+
+.userSidebar li {
+  list-style-type: none;
+  padding: 12px 16px;
+}
+
+.userSidebar li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+.userSidebar li a:hover {
+  background-color: #575757;
+}
+
+.userlist.active .userSidebar {
+  display: block;
+}

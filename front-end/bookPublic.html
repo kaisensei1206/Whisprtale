@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Book Details</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+
+<body>
+  <div id="nav-placeholder"></div>
+  <div id="book-container">
+    <div id="book-image">
+      <img id="book-cover" alt="Book Cover">
+    </div>
+    <div id="book-info">
+      <h1 id="book-title"></h1>
+      <p id="book-summary"></p>
+      <p id="book-details">
+        <span id="book-author"></span>
+        <span id="book-genre"></span>
+      </p>
+      <div id="button-container">
+        <button id="view-btn">View</button>
+        <!-- Insert the like, save, and comment buttons here -->
+        <button class="like-button">
+          <!-- SVG for like -->
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+        </button>
+        <button class="save-button">
+          <!-- SVG for save -->
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 2v19.79l5-4.5 5 4.5V2z" />
+          </svg>
+        </button>
+        <button class="comment-button">
+          <!-- SVG for comment -->
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M21 6h-18c-1.105 0-2 .895-2 2v8c0 1.105.895 2 2 2h13l4 4v-14c0-1.105-.895-2-2-2zM19 14h-14v-2h14v2zm0-4h-14v-2h14v2z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function loadNavigation() {
+      fetch('navigation.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('nav-placeholder').innerHTML = data;
+          console.log('Navigation HTML loaded successfully');
+          initPage(); // Only initialize the page after navigation is loaded
+        })
+        .catch(error => console.error('Error loading navigation:', error));
+    }
+  </script>
+  <script src="navigation.js" defer></script>
+  <script src="bookPublic.js" defer></script>
+  <script>
+    window.onload = function () {
+      loadNavigation();
+    };
+  </script>
+</body>
+
+</html>

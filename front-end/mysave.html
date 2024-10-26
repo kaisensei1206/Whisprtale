@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked or Bookmarked Stories</title>
+    <link rel="stylesheet" href="myStory.css">
+    <script type="module" src="mysave.js" defer></script>
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <div id="title">
+        <h3>Saved Whisper</h3>
+
+        <div class="sort-filter">
+            <a id="selectModeToggle" href="#" class="select-mode-toggle">Select</a>
+            <button id="deleteSelectedButton" class="delete-selected" style="display: none;">Delete</button>
+            <!-- Moved Delete button -->
+        </div>
+        <div class="wrapper">
+            <div id="storyList" class="story-grid"></div>
+        </div>
+        <div class="story-container">
+            <div id="storyGrid" class="story-grid"></div>
+        </div>
+        <p id="noRecords" class="no-records" style="display: none;">No records found</p>
+
+    </div>
+    <script>
+        function loadNavigation() {
+            fetch('navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('nav-placeholder').innerHTML = data;
+                    console.log('Navigation HTML loaded successfully'); // Log success
+                    initPage(); // Only initialize the page after navigation is loaded
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        }
+    </script>
+    <script src="navigation.js" defer></script>
+    <script>
+        window.onload = function () {
+            loadNavigation(); // Ensure the navigation is loaded on page load
+        };
+    </script>
+</body>
+
+</html>

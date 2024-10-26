@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - 説故事</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <section class="hero">
+        <h1>Welcome to WhisprTale</h1>
+        <p>Your one-stop destination for incredible stories</p>
+        <button id="join-us-button" onclick="location.href='registration.html'">Join Us</button>
+    </section>
+
+    <!-- Popular Books Section -->
+    <section id="popular-books">
+        <h2>Most Popular Books</h2>
+        <div class="slideshow-container">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <!-- Recommended Books Section -->
+    <section class="recommended-books">
+        <h2>Recommended Books</h2>
+        <div class="book-grid" id="recommended-books-container">
+            <!-- Book cards will be dynamically injected here -->
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>At WhisprTale, we believe in the power of storytelling. Our platform offers a wide range of stories for
+            readers of
+            all ages.</p>
+    </section>
+
+    <script src="index.js" defer></script>
+    <script src="navigation.js" defer></script>
+</body>
+
+</html>

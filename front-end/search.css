@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6d83f2, #d4a0f5);
+  margin: 0;
+  padding: 0;
+  padding-top: 100px;
+  /* Adjust if needed to fit the nav */
+}
+
+#search-result-title {
+  position: absolute;
+  top: 70px;
+  /* Adjust if needed to fit under the navigation */
+  left: 15px;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  color: #f7e9e9;
+}
+
+.container {
+  width: 98%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.results {
+  margin-top: 40px;
+}
+
+/* Flex container for book entries */
+.book {
+  display: flex;
+  align-items: flex-start;
+  /* Align items to the top of the container */
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  border: 1px solid #ddd;
+}
+
+/* Book cover styling */
+.book-cover {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  margin-right: 20px;
+  /* Space between cover and text */
+  border-radius: 8px;
+}
+
+/* Text content styling */
+.book-details {
+  flex-grow: 1;
+  /* Allows text content to fill available space */
+}
+
+.book-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #fdfbfb;
+}
+
+.book-author,
+.book-genre,
+.book-description {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #faf2f2;
+}
+
+/* Link styling */
+.book-link {
+  text-decoration: none;
+}
+
+.book:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.book-link:hover .book-title,
+.book-link:hover .book-author,
+.book-link:hover .book-genre,
+.book-link:hover .book-description {
+  text-shadow: 0 0 8px rgba(243, 239, 244, 0.8);
+}
+
+.recommendations {
+  margin-top: 20px;
+}
+
+.recommendations .book-title {
+  font-size: 16px;
+  color: #6d83f2;
+}

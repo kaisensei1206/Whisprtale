@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    background: linear-gradient(135deg, #6d83f2, #d4a0f5);
+    color: #ffffff;
+}
+
+/* Adding the new styles for the upload button */
+.custom-file-upload {
+    background-color: #a063f9;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+/* Additional styles for file name display */
+.file-name-display {
+    font-size: 1rem;
+    margin-left: 10px;
+    color: #8a4acb;
+    vertical-align: middle;
+    font-family: Arial, sans-serif;
+}
+
+
+.custom-file-upload:hover {
+    background-color: #8a4acb;
+}
+
+.create-story {
+    padding: 50px;
+    max-width: 800px;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.create-story h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #6d83f2;
+    font-family: 'Great Vibes', cursive;
+}
+
+.create-story p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.create-story .or-text {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #333333;
+    font-family: 'Pacifico', cursive;
+}
+
+.create-story button {
+    background-color: #a063f9;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 25px;
+    /* More rounded corners */
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px;
+    font-family: 'Pacifico', cursive;
+    /* Custom font for buttons */
+}
+
+.create-story button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.create-story button:hover:enabled {
+    background-color: #8a4acb;
+}
+
+.create-story textarea,
+.create-story input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #a063f9;
+    border-radius: 5px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    /* Standard font for text */
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+#loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.loading-animation {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #a063f9;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#progress-percentage {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #6d83f2;
+}
