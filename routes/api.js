@@ -11,10 +11,14 @@ const pos = require('pos');
 const User = require('../models/user'); // Adjust the path if necessary
 
 // Initialize OpenAI with your API key
-const openai = new OpenAI({
-  apiKey: "sk-MUBeqO_mfIUtcYcWaZWUzIRdKiKfW5wJtMLLogFccfT3BlbkFJ-DlSHJvUxuWzHgQAQjxTXLhg_VbQwNZxGWfIuTh0IA",
-});
+require('dotenv').config();
 
+// 使用 process.env 来获取 API 密钥
+const apiKey = process.env.OPENAI_API_KEY;
+
+const openai = new OpenAI({
+  apiKey: apiKey,
+});
 const router = express.Router();
 const upload = multer({ dest: 'uploads/' });
 const Story = require('../models/story');
