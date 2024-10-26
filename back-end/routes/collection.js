@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Story = require('../models/story');
 const Image = require('../models/image');
-const ensureAuthenticated = require('../routes/ensureAuthenticated');
+const ensureAuthenticated = require('./ensureAuthenticated');
 
 // Get the collection of books for the logged-in user
 router.get('/my-collection', ensureAuthenticated, async (req, res) => {

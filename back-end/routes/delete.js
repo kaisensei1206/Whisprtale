@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Story = require('../models/story');
 const Image = require('../models/image');
-const ensureAuthenticated = require('../routes/ensureAuthenticated');
+const ensureAuthenticated = require('./ensureAuthenticated');
 
 // Delete books and associated images
 router.post('/delete-books', ensureAuthenticated, async (req, res) => {
