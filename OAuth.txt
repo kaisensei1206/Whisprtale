@@ -1,0 +1,4 @@
+Client ID: 67194094732-d6sj9igmjm3rkagjcn1ubpoe3nupho0k.apps.googleusercontent.com
+Client Secret: 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
+Project ID: aistory-425013
+Project Number: 67194094732
