@@ -1,2 +1,4 @@
 .env
 OAuth.txt
+node_modules/
+env/
