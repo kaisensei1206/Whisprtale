@@ -1,10 +1,20 @@
 {
   "dependencies": {
     "axios": "^1.7.7",
+    "bcryptjs": "^3.0.3",
+    "connect-mongo": "^5.1.0",
+    "cors": "^2.8.6",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "express-session": "^1.19.0",
     "form-data": "^4.0.1",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.8.0",
     "multer": "^1.4.5-lts.1",
-    "openai": "^4.68.4"
+    "openai": "^4.68.4",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "pos": "^0.4.2"
   }
 }
